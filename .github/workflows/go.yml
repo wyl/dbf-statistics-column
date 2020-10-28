@@ -1,11 +1,11 @@
 name: goreleaser
 
 on:
-  pull_request:
   push:
+    tags:
+      - '*'
+  pull_request:
 
-builds:
-    main: ./src/main.go
 jobs:
   goreleaser:
     runs-on: ubuntu-latest
